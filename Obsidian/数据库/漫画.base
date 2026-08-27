@@ -1,0 +1,51 @@
+filters:
+  and:
+    - file.folder.startsWith("娱乐/漫画")
+formulas:
+  标签: |-
+    tags
+    .map(value.replace('#',''))
+    .join('，')
+  观看时间: |
+    开始日期.format("yyyy年MM月DD日")
+    +
+    " - "
+    +
+    if(结束日期, 
+    结束日期.format("yyyy年MM月DD日"),
+    today().format("yyyy年MM月DD日"))
+views:
+  - type: cards
+    name: 卡片
+    order:
+      - file.name
+      - 作者
+      - 连载日期
+      - 发行杂志
+      - 状态
+      - formula.标签
+      - formula.观看时间
+    sort:
+      - property: 结束日期
+        direction: ASC
+    image: note.封面
+    imageFit: contain
+    imageAspectRatio: 1
+    cardSize: 230
+  - type: table
+    name: 表格
+    order:
+      - file.name
+      - 制作组
+      - 放送日期
+      - 状态
+      - formula.标签
+    sort:
+      - property: formula.未命名
+        direction: ASC
+      - property: 放送日期
+        direction: ASC
+    columnSize:
+      file.name: 168
+      note.制作组: 101
+      note.放送日期: 116

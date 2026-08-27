@@ -1,0 +1,13 @@
+{
+  "types": {
+    "aliases": "aliases",
+    "cssclasses": "multitext",
+    "tags": "tags",
+    "放送日期": "date",
+    "状态": "text",
+    "开始日期": "date",
+    "结束日期": "date",
+    "连载日期": "date",
+    "出版时间": "date"
+  }
+}
