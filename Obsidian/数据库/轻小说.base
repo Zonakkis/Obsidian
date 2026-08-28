@@ -1,6 +1,5 @@
 filters:
   and:
-    - file.folder.startsWith("娱乐/轻小说")
     - file.inFolder("娱乐/轻小说")
 formulas:
   标签: |-

@@ -1,6 +1,6 @@
 filters:
   and:
-    - file.folder.startsWith("娱乐/漫画")
+    - file.inFolder("娱乐/漫画")
 formulas:
   标签: |-
     tags
