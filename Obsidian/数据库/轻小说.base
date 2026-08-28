@@ -51,3 +51,5 @@ views:
       file.name: 168
       note.制作组: 101
       note.放送日期: 116
+  - type: list
+    name: 视图
