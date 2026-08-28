@@ -1,8 +1,8 @@
 # 定义
 ---
 >[!note] docker ps
->
->格式：
+>列出所有容器。
+>格式：docker ps [OPTIONS]
 
 # 参数
 ---
