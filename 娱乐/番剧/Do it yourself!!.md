@@ -1,5 +1,5 @@
 ---
-封面: Do it yourself!!!.png
+封面: "[[Do it yourself!!!.png]]"
 制作组: PINE JAM
 放送日期: 2022-10-05
 开始日期: 2025-10-10
