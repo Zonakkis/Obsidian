@@ -1,6 +1,7 @@
 filters:
   and:
     - file.folder.startsWith("娱乐/轻小说")
+    - file.inFolder("娱乐/轻小说")
 formulas:
   标签: |-
     tags
@@ -51,5 +52,3 @@ views:
       file.name: 168
       note.制作组: 101
       note.放送日期: 116
-  - type: list
-    name: 视图
