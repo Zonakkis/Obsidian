@@ -1,5 +1,5 @@
 ---
-封面: Just Because!.png
+封面: "[[Just Because!.png]]"
 制作组: PINE JAM
 放送日期: 2017-10-05
 开始日期: 2025-05-24
