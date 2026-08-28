@@ -39,7 +39,7 @@ views:
     order:
       - file.name
       - 制作组
-      - 放送日期
+      - formula.出版时间
       - 状态
       - formula.标签
     sort:
