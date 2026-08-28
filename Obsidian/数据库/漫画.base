@@ -36,7 +36,8 @@ views:
     name: 表格
     order:
       - file.name
-      - 制作组
+      - 作者
+      - 发行杂志
       - 放送日期
       - 状态
       - formula.标签
