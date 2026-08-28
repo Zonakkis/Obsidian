@@ -38,7 +38,8 @@ views:
     name: 表格
     order:
       - file.name
-      - 制作组
+      - 作者
+      - 插画师
       - formula.出版时间
       - 状态
       - formula.标签
@@ -50,4 +51,3 @@ views:
     columnSize:
       file.name: 168
       note.制作组: 101
-      note.放送日期: 116
