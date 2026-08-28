@@ -38,7 +38,7 @@ views:
       - file.name
       - 作者
       - 发行杂志
-      - 放送日期
+      - 连载日期
       - 状态
       - formula.标签
     sort:
