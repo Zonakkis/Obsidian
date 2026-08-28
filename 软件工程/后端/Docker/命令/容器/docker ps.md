@@ -2,6 +2,7 @@
 ---
 >[!note] docker ps
 >列出容器。
+>默认情况下只列出正在运行的容器。
 >格式：docker ps [OPTIONS]
 
 # 参数
