@@ -5,10 +5,17 @@
 # 指令
 ---
 
-| 指令     | 示例                      | 描述     |
-| ------ | ----------------------- | ------ |
-| `FROM` | `FROM python:3.11-slim` | 指定基础镜像 |
-|        |                         |        |
+| 指令           | 示例                                              | 描述                                   |
+| ------------ | ----------------------------------------------- | ------------------------------------ |
+| `FROM`       | `FROM python:3.11-slim`                         | 指定基础镜像                               |
+| `WORKDIR`    | `WORKDIR /app`                                  | 设置容器内的工作目录（后续指令在此目录下执行）              |
+| `COPY`       | `COPY target/demo.jar app.jar`                  | 将宿主机的文件复制到容器中                        |
+| `RUN`        | `RUN apt-get update && apt-get install -y curl` | 在构建镜像时执行的命令（如安装软件、编译等）               |
+| `ENV`        | `ENV JAVA_OPTS="-Xms256m -Xmx512m"`             | 设置环境变量                               |
+| `EXPOSE`     | `EXPOSE 8080`                                   | 声明容器暴露的端口（仅声明，实际映射需在运行命令中指定 -p）      |
+| `CMD`        | `CMD ["java", "-jar", "app.jar"]`               | 容器启动后的**默认命令**（可被 docker run 后的参数覆盖） |
+| `ENTRYPOINT` | `ENTRYPOINT ["java", "-jar", "app.jar"]`        | 容器启动后的**入口命令**（不可轻易被覆盖，通常与 CMD 配合）   |
+
 # 例子
 ---
 假设有一个Spring Boot项目，已经通过 Maven/Gradle 打包完成。
