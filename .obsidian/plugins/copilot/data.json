@@ -24,9 +24,10 @@
   "openAIProxyBaseUrl": "",
   "openAIEmbeddingProxyBaseUrl": "",
   "stream": true,
-  "copilotFolder": "copilot",
+  "copilotFolder": "Obsidian/copilot",
   "copilotRootHistory": [
-    "copilot"
+    "copilot",
+    "Obsidian/copilot"
   ],
   "upgradedToV8FromLegacy": false,
   "defaultSaveFolder": "copilot/copilot-conversations",
