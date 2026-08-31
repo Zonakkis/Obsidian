@@ -8,6 +8,6 @@
 | 命令        | 定义                     |
 | --------- | ---------------------- |
 | [[GET]]   | ![[GET#^definition]]   |
-| [[数据库/Key-Value型/Redis/命令/字符串 (string)/SET]]   | ![[数据库/Key-Value型/Redis/命令/字符串 (string)/SET#^definition]]   |
+| [[后端/数据库/Key-Value型/Redis/命令/字符串 (string)/SET]]   | ![[后端/数据库/Key-Value型/Redis/命令/字符串 (string)/SET#^definition]]   |
 | [[SETEX]] | ![[SETEX#^definition]] |
 | [[SETNX]] | ![[SETNX#^definition]] |
