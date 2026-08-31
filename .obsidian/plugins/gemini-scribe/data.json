@@ -2,7 +2,7 @@
   "provider": "gemini",
   "ollamaBaseUrl": "http://localhost:11434",
   "customBaseUrl": "",
-  "apiKeySecretName": "",
+  "apiKeySecretName": "googleaistudio",
   "chatModelName": "gemini-flash-latest",
   "summaryModelName": "gemini-flash-latest",
   "completionsModelName": "gemini-flash-lite-latest",
@@ -167,6 +167,6 @@
         "maxTemperature": 2
       }
     ],
-    "timestamp": 1788177075261
+    "timestamp": 1788177149228
   }
 }
