@@ -542,7 +542,7 @@
       "providerId": "184df5e0-b34c-47a5-b327-35684d8de054",
       "info": {
         "id": "sonnet",
-        "displayName": "DeepSeek V4 Pro",
+        "displayName": "DeepSeek V4 Flash",
         "description": "Custom Sonnet model (1M context)"
       },
       "configuredModelId": "66fb9fd6-aa59-426e-8fc8-37d3b3b59cb1",
