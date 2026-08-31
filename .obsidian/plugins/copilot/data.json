@@ -478,7 +478,7 @@
   "convertedDocOutputFolder": "",
   "agentMode": {
     "byok": {},
-    "activeBackend": "opencode",
+    "activeBackend": "claude",
     "backends": {},
     "debugFullFrames": true,
     "notificationSound": true,
@@ -486,11 +486,90 @@
     "welcomeDismissed": false,
     "skills": {
       "folder": "copilot/skills"
+    },
+    "deviceProfiles": {
+      "c3a8fa0f-c806-4dd3-b506-5fa92b8f5368": {
+        "claudeCliPath": "E:\\Code\\npm\\node_modules\\@anthropic-ai\\claude-code\\bin\\claude.exe"
+      }
     }
   },
-  "providers": {},
-  "configuredModels": [],
-  "backends": {},
+  "providers": {
+    "184df5e0-b34c-47a5-b327-35684d8de054": {
+      "providerType": "anthropic",
+      "displayName": "Claude",
+      "origin": {
+        "kind": "agent",
+        "agentType": "claude"
+      },
+      "requiresApiKey": false,
+      "providerId": "184df5e0-b34c-47a5-b327-35684d8de054",
+      "addedAt": 1788178124781,
+      "apiKeyKeychainId": null
+    }
+  },
+  "configuredModels": [
+    {
+      "providerId": "184df5e0-b34c-47a5-b327-35684d8de054",
+      "info": {
+        "id": "default",
+        "displayName": "Default (recommended)",
+        "description": "Use the default model (currently glm-5.3-flash[1m])"
+      },
+      "configuredModelId": "81c6a235-ae13-4e89-ab4c-6573e390701b",
+      "configuredAt": 1788178125573
+    },
+    {
+      "providerId": "184df5e0-b34c-47a5-b327-35684d8de054",
+      "info": {
+        "id": "opus",
+        "displayName": "GLM 5.3 Flash",
+        "description": "Custom Opus model (1M context)"
+      },
+      "configuredModelId": "59950da7-a76a-4edb-b15a-a35d7b38048e",
+      "configuredAt": 1788178125576
+    },
+    {
+      "providerId": "184df5e0-b34c-47a5-b327-35684d8de054",
+      "info": {
+        "id": "fable",
+        "displayName": "Kimi K3",
+        "description": "Custom Fable model"
+      },
+      "configuredModelId": "6731cdba-c3d5-49f7-954b-d49a3b3c60b4",
+      "configuredAt": 1788178125577
+    },
+    {
+      "providerId": "184df5e0-b34c-47a5-b327-35684d8de054",
+      "info": {
+        "id": "sonnet",
+        "displayName": "DeepSeek V4 Pro",
+        "description": "Custom Sonnet model (1M context)"
+      },
+      "configuredModelId": "66fb9fd6-aa59-426e-8fc8-37d3b3b59cb1",
+      "configuredAt": 1788178125577
+    },
+    {
+      "providerId": "184df5e0-b34c-47a5-b327-35684d8de054",
+      "info": {
+        "id": "haiku",
+        "displayName": "Haiku",
+        "description": "Haiku 4.5 · Fastest for quick answers · $1/$5 per Mtok"
+      },
+      "configuredModelId": "fe943127-b0c1-486a-85e1-d5d8dfdc8039",
+      "configuredAt": 1788178125578
+    }
+  ],
+  "backends": {
+    "claude": {
+      "enabledModels": [
+        "81c6a235-ae13-4e89-ab4c-6573e390701b",
+        "59950da7-a76a-4edb-b15a-a35d7b38048e",
+        "6731cdba-c3d5-49f7-954b-d49a3b3c60b4",
+        "66fb9fd6-aa59-426e-8fc8-37d3b3b59cb1",
+        "fe943127-b0c1-486a-85e1-d5d8dfdc8039"
+      ]
+    }
+  },
   "_keychainVaultId": "98678d18",
   "settingsVersion": 12
 }
