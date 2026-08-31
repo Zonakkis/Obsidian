@@ -485,7 +485,8 @@
         "defaultModel": {
           "baseModelId": "sonnet",
           "effort": "max"
-        }
+        },
+        "defaultMode": "auto"
       }
     },
     "debugFullFrames": true,
