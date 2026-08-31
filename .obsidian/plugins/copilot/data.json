@@ -480,7 +480,14 @@
   "agentMode": {
     "byok": {},
     "activeBackend": "claude",
-    "backends": {},
+    "backends": {
+      "claude": {
+        "defaultModel": {
+          "baseModelId": "sonnet",
+          "effort": "max"
+        }
+      }
+    },
     "debugFullFrames": true,
     "notificationSound": true,
     "notificationSoundId": "piano",
