@@ -11,6 +11,8 @@
 # Agents
 .agents/
 .claude/
+.copitlot/
+.opencode/
 .reasonix/
 Obsidian/copilot/
 Obsidian/gemini-scribe
