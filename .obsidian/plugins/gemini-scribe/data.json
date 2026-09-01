@@ -5,11 +5,11 @@
   "apiKeySecretName": "googleaistudio",
   "chatModelName": "gemini-3.7-flash",
   "summaryModelName": "gemini-3.5-flash-lite",
-  "completionsModelName": "gemini-flash-lite-latest",
+  "completionsModelName": "gemini-3.5-flash-lite",
   "imageModelName": "gemini-2.5-flash-image",
   "ollamaModelName": "",
   "summaryFrontmatterKey": "summary",
-  "userName": "User",
+  "userName": "Zonakkis",
   "chatHistory": false,
   "historyFolder": "Obsidian/gemini-scribe",
   "debugMode": false,
@@ -46,7 +46,10 @@
   "logToolExecution": true,
   "autoRunCatchUp": false,
   "hooksEnabled": false,
-  "expandedSettingsSections": [],
+  "expandedSettingsSections": [
+    "ui",
+    "automation"
+  ],
   "remoteModelCache": {
     "models": [
       {
