@@ -2,10 +2,10 @@
   "provider": "gemini",
   "ollamaBaseUrl": "http://localhost:11434",
   "customBaseUrl": "",
-  "apiKeySecretName": "",
-  "chatModelName": "gemini-flash-latest",
-  "summaryModelName": "gemini-flash-latest",
-  "completionsModelName": "gemini-flash-lite-latest",
+  "apiKeySecretName": "googleaistudio",
+  "chatModelName": "gemini-3.5-flash-lite",
+  "summaryModelName": "gemini-3.5-flash-lite",
+  "completionsModelName": "gemini-3.5-flash-lite",
   "imageModelName": "gemini-2.5-flash-image",
   "ollamaModelName": "",
   "summaryFrontmatterKey": "summary",
@@ -172,6 +172,6 @@
         "maxTemperature": 2
       }
     ],
-    "timestamp": 1788250009153
+    "timestamp": 1788250081035
   }
 }
