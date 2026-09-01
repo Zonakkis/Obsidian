@@ -9,6 +9,7 @@
 .DS_Store
 
 # Agents
+.agents/
 .claude/
 .reasonix/
 Obsidian/copilot/
