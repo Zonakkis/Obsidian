@@ -8,6 +8,7 @@
 服务可以从Dockerfile构建镜像也可以是已有镜像。
 # 例子
 ---
+一个`docker-compose.yml`：
 ```yaml
 version: '3.8'  # Compose 文件版本
 
