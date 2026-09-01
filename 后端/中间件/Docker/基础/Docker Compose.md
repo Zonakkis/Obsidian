@@ -15,7 +15,7 @@ services:       # 定义服务
     build: .    # 构建配置
     ports:      # 端口映射
       - "8080:80"
-    volumes:    # 卷挂载
+    volumes:    # 挂载
       - ./app:/app
     environment: # 环境变量
       - NODE_ENV=production
