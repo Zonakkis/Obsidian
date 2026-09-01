@@ -514,6 +514,19 @@
       "providerId": "184df5e0-b34c-47a5-b327-35684d8de054",
       "addedAt": 1788178124781,
       "apiKeyKeychainId": null
+    },
+    "2f278416-2436-4052-937c-f5129aa09825": {
+      "providerType": "openai-compatible",
+      "displayName": "维云",
+      "baseUrl": "https://vsllm.com/v1",
+      "enableCors": false,
+      "requiresApiKey": false,
+      "origin": {
+        "kind": "byok"
+      },
+      "providerId": "2f278416-2436-4052-937c-f5129aa09825",
+      "addedAt": 1788230880293,
+      "apiKeyKeychainId": "copilot-v98678d18-provider-2f278416-2436-4052-937c-f5129aa09825"
     }
   },
   "configuredModels": [
@@ -566,6 +579,15 @@
       },
       "configuredModelId": "fe943127-b0c1-486a-85e1-d5d8dfdc8039",
       "configuredAt": 1788178125578
+    },
+    {
+      "configuredModelId": "7321146c-0c18-4f44-9dc2-4eec71448047",
+      "providerId": "2f278416-2436-4052-937c-f5129aa09825",
+      "info": {
+        "id": "[opencode]deepseek-v4-flash",
+        "displayName": "[opencode]deepseek-v4-flash"
+      },
+      "configuredAt": 1788230880314
     }
   ],
   "backends": {
@@ -576,6 +598,16 @@
         "6731cdba-c3d5-49f7-954b-d49a3b3c60b4",
         "66fb9fd6-aa59-426e-8fc8-37d3b3b59cb1",
         "fe943127-b0c1-486a-85e1-d5d8dfdc8039"
+      ]
+    },
+    "chat": {
+      "enabledModels": [
+        "7321146c-0c18-4f44-9dc2-4eec71448047"
+      ]
+    },
+    "opencode": {
+      "enabledModels": [
+        "7321146c-0c18-4f44-9dc2-4eec71448047"
       ]
     }
   },
