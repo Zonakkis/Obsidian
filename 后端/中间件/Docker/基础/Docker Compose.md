@@ -24,6 +24,7 @@ services:       # 定义服务
 
   db:           # 数据库服务
     image: mysql:8.0
+    container_name: mysql80 # 容器名
     volumes:
       - db_data:/var/lib/mysql
 
