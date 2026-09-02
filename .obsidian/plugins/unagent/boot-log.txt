@@ -1,42 +1,3 @@
-2026-09-02T11:14:56.393Z	alive:495s
-2026-09-02T11:15:01.393Z	alive:500s
-2026-09-02T11:15:06.393Z	alive:505s
-2026-09-02T11:15:11.258Z	diag:unhandled-rejection Cannot read properties of undefined (reading 'path') ::     at t.getFileCache (http://localhost/app.js:1:1504413) |     at PasteImageRenamePlugin.eval (plugin:obsidian-paste-image-rename:608:48)
-2026-09-02T11:15:11.393Z	alive:510s
-2026-09-02T11:15:16.393Z	alive:515s
-2026-09-02T11:15:21.393Z	alive:520s
-2026-09-02T11:15:26.401Z	alive:525s
-2026-09-02T11:15:31.396Z	alive:530s
-2026-09-02T11:15:36.393Z	alive:535s
-2026-09-02T11:15:41.412Z	alive:540s
-2026-09-02T11:15:46.393Z	alive:545s
-2026-09-02T11:15:51.393Z	alive:550s
-2026-09-02T11:15:57.005Z	alive:555s
-2026-09-02T11:16:01.988Z	alive:560s
-2026-09-02T11:17:37.726Z	alive:565s
-2026-09-02T11:17:41.393Z	alive:570s
-2026-09-02T11:17:46.393Z	alive:575s
-2026-09-02T11:17:51.393Z	alive:580s
-2026-09-02T11:17:56.397Z	alive:585s
-2026-09-02T11:18:01.399Z	alive:590s
-2026-09-02T11:18:07.008Z	alive:595s
-2026-09-02T11:18:11.393Z	alive:600s
-2026-09-02T11:18:16.393Z	alive:605s
-2026-09-02T11:18:21.392Z	alive:610s
-2026-09-02T11:18:23.873Z	diag:kb-open src=real native=280 vv=0 est=0 final=172 lift=108 nav=0 delta=108
-2026-09-02T11:18:26.393Z	alive:615s
-2026-09-02T11:18:31.399Z	alive:620s
-2026-09-02T11:18:36.393Z	alive:625s
-2026-09-02T11:18:41.393Z	alive:630s
-2026-09-02T11:18:46.393Z	alive:635s
-2026-09-02T11:18:51.265Z	diag:kb-close final=0 nav=62 seen=1 blocked=0
-2026-09-02T11:18:51.393Z	alive:640s
-2026-09-02T11:18:56.394Z	alive:645s
-2026-09-02T11:19:01.406Z	alive:650s
-2026-09-02T11:19:06.394Z	alive:655s
-2026-09-02T11:19:11.985Z	alive:660s
-2026-09-02T11:19:17.136Z	alive:665s
-2026-09-02T11:20:18.159Z	alive:670s
 2026-09-02T11:20:21.400Z	alive:675s
 2026-09-02T11:20:26.393Z	alive:680s
 2026-09-02T11:20:31.446Z	alive:685s
@@ -238,3 +199,42 @@
 2026-09-02T11:51:06.393Z	alive:1585s
 2026-09-02T11:51:11.409Z	alive:1590s
 2026-09-02T11:51:16.400Z	alive:1595s
+2026-09-02T11:51:21.393Z	alive:1600s
+2026-09-02T11:51:26.393Z	alive:1605s
+2026-09-02T11:51:31.393Z	alive:1610s
+2026-09-02T11:51:36.393Z	alive:1615s
+2026-09-02T11:51:41.393Z	alive:1620s
+2026-09-02T11:51:46.401Z	alive:1625s
+2026-09-02T11:51:51.407Z	alive:1630s
+2026-09-02T11:51:56.392Z	alive:1635s
+2026-09-02T11:52:01.393Z	alive:1640s
+2026-09-02T11:52:06.393Z	alive:1645s
+2026-09-02T11:52:11.417Z	alive:1650s
+2026-09-02T11:52:16.393Z	alive:1655s
+2026-09-02T11:52:21.393Z	alive:1660s
+2026-09-02T11:52:26.393Z	alive:1665s
+2026-09-02T11:52:31.393Z	alive:1670s
+2026-09-02T11:52:36.393Z	alive:1675s
+2026-09-02T11:52:41.993Z	alive:1680s
+2026-09-02T11:52:46.984Z	alive:1685s
+2026-09-02T11:53:21.516Z	alive:1690s
+2026-09-02T11:53:26.393Z	alive:1695s
+2026-09-02T11:54:32.330Z	onload:start prev-unload-mark=none
+2026-09-02T11:54:32.333Z	diag:ua Mozilla/5.0 (Linux; Android 13; V1955A Build/TP1A.220624.014; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/152.0.7977.54 Mo
+2026-09-02T11:54:32.388Z	onload:after-loadSettings
+2026-09-02T11:54:32.389Z	onload:before-evolveStorage
+2026-09-02T11:54:32.389Z	onload:tools-registered
+2026-09-02T11:54:32.390Z	onload:before-registerView
+2026-09-02T11:54:32.390Z	onload:view-registered
+2026-09-02T11:54:32.390Z	onload:agentHost-deferred
+2026-09-02T11:54:32.392Z	onload:complete
+2026-09-02T11:54:32.619Z	onload:after-evolveStorage
+2026-09-02T11:54:32.619Z	onload:before-undoHydrate
+2026-09-02T11:54:32.646Z	onload:after-undoHydrate
+2026-09-02T11:54:34.620Z	diag:unhandled-rejection Cannot read properties of undefined (reading 'alphaTo') ::     at l (plugin:obsidian-excalidraw-plugin:26:687641) |     at StylesManager.harvestStyles (plugin:obsidian-excalidraw-plugin:26:687794)
+2026-09-02T11:54:37.487Z	alive:5s
+2026-09-02T11:54:42.487Z	alive:10s
+2026-09-02T11:54:47.987Z	alive:15s
+2026-09-02T11:54:53.040Z	alive:20s
+2026-09-02T11:55:11.393Z	alive:25s
+2026-09-02T11:55:12.487Z	alive:30s
