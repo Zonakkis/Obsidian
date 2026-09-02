@@ -1,0 +1,78 @@
+{
+  "llm": {
+    "vendors": [],
+    "activeModelId": null,
+    "activeVisionModelId": null,
+    "activeEmbeddingModelId": null,
+    "profiles": [],
+    "activeProfileId": null,
+    "provider": "openai-compatible",
+    "model": "",
+    "baseUrl": "",
+    "apiKey": ""
+  },
+  "image": {
+    "vendors": [],
+    "activeModelId": null,
+    "provider": "openai-images",
+    "model": "gpt-image-1",
+    "baseUrl": "",
+    "apiKey": "",
+    "size": "1024x1024",
+    "attachmentFolder": ""
+  },
+  "safety": {
+    "approvalMode": "default",
+    "confirmDestructive": true
+  },
+  "skills": {
+    "enabled": true,
+    "disabled": []
+  },
+  "agents": {
+    "enabled": true,
+    "disabled": [],
+    "disabledTools": [],
+    "perAgent": {}
+  },
+  "general": {
+    "excludedFolders": [],
+    "aiFolder": "Obsidian/UNagent",
+    "hideAiFolder": true,
+    "userName": "Zonakkis",
+    "assistantName": "AI",
+    "maxToolTurns": 8,
+    "mentionInline": "excerpt",
+    "diagnostics": false,
+    "reflectSuggestions": true,
+    "hiddenCommands": [],
+    "language": "auto",
+    "fileCardDecisions": {}
+  },
+  "mcp": {
+    "services": [
+      {
+        "id": "official-bailian-websearch",
+        "name": "bailian-websearch",
+        "baseUrl": "https://dashscope.aliyuncs.com/api/v1/mcps/WebSearch/mcp",
+        "authHeader": "",
+        "enabled": true,
+        "official": true
+      },
+      {
+        "id": "official-exa",
+        "name": "exa",
+        "baseUrl": "https://mcp.exa.ai/mcp",
+        "authHeader": "",
+        "enabled": true,
+        "official": true
+      }
+    ]
+  },
+  "retrieval": {
+    "semanticEnabled": false,
+    "embeddingBaseUrl": "https://dashscope.aliyuncs.com/compatible-mode/v1",
+    "embeddingApiKey": "",
+    "embeddingModel": "text-embedding-v4"
+  }
+}
