@@ -1,7 +1,22 @@
 {
   "llm": {
-    "vendors": [],
-    "activeModelId": null,
+    "vendors": [
+      {
+        "id": "v-mtjzvley-a496t3",
+        "name": "Agent Router",
+        "provider": "openai-compatible",
+        "baseUrl": "https://agentrouter.org/v1",
+        "apiKey": "sk-30PTAjVpIN78CxYYc2SxeWklRJgtkefQ9uYR9TXSeW8quBa7",
+        "models": [
+          {
+            "id": "m-mtjzy5gv-7lgrd5",
+            "name": "deepseek-v4-flash"
+          }
+        ],
+        "apiMode": "responses"
+      }
+    ],
+    "activeModelId": "m-mtjzy5gv-7lgrd5",
     "activeVisionModelId": null,
     "activeEmbeddingModelId": null,
     "profiles": [],
