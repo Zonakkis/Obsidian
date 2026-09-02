@@ -1,0 +1,16 @@
+2026-09-02T11:01:31.361Z	onload:start prev-unload-mark=none
+2026-09-02T11:01:31.361Z	diag:ua Mozilla/5.0 (Linux; Android 13; V1955A Build/TP1A.220624.014; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/152.0.7977.54 Mo
+2026-09-02T11:01:31.378Z	onload:after-loadSettings
+2026-09-02T11:01:31.379Z	onload:before-evolveStorage
+2026-09-02T11:01:31.379Z	onload:tools-registered
+2026-09-02T11:01:31.380Z	onload:before-registerView
+2026-09-02T11:01:31.380Z	onload:view-registered
+2026-09-02T11:01:31.380Z	onload:agentHost-deferred
+2026-09-02T11:01:31.382Z	onload:complete
+2026-09-02T11:01:31.602Z	onload:after-evolveStorage
+2026-09-02T11:01:31.602Z	onload:before-undoHydrate
+2026-09-02T11:01:31.614Z	onload:after-undoHydrate
+2026-09-02T11:01:36.393Z	alive:5s
+2026-09-02T11:01:41.393Z	alive:10s
+2026-09-02T11:01:46.393Z	alive:15s
+2026-09-02T11:01:51.393Z	alive:20s
