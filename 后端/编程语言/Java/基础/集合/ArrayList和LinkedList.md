@@ -14,8 +14,9 @@
 # ArrayList
 ---
 ## 初始化
-Java8后，ArrayList采用懒加载。初始化后是空数组
+Java8后，ArrayList采用懒加载。初始化后是空的全局数组`DEFAULTCAPACITY_EMPTY_ELEMENTDATA`，直到第一次`add()`才分配内存。默认初始化容量为10。
 ## 扩容
+
 
 # 问题
 ---
