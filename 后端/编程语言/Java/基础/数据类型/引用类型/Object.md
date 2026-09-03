@@ -2,8 +2,8 @@
 ---
 equals()是 Object 类里定义的一个方法，默认实现为比较两个对象的地址是否相同，而常用的基本数据类型的包装类以及`String`都重写了`equals`方法，使其比较两个对象的内容是否相同。
 ```java
-Object a = new Integer(7777);
-Object b = new Integer(7777);
+Integer a = 7777;
+Integer b = 7777;
 System.out.print(a.equals(b)); // true
 ```
 # 问题
