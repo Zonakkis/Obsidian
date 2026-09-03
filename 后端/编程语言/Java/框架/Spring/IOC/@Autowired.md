@@ -13,7 +13,7 @@
 # 两种注入注解
 ---
 
-|         | [[@Autowired]]       | @Resource                       |
+|         | @Autowired           | @Resource                       |
 | ------- | -------------------- | ------------------------------- |
 | 来源      | Spring框架原生           | Java 标准/JSR-250                 |
 | 默认装配规则  | **byType** (先类型，再名称) | **byName** (先名称，再类型)            |
@@ -40,3 +40,4 @@
 1. **扫描**：容器启动时，扫描classpath，将`@Component`、`@Controller`、`@Service`、`@Repository`等标记的类注册为BeanDefinition。
 2. **实例化**：对于非构造注入Bean，调用无参构造函数创建实例；对于构造器注入Bean，创建时就调用对应构造函数进行注入。
 3. **填充**：实例化后，`AutowiredAnnotationBeanPostProcessor`会扫描bean的字段，扫描到`@Autowired`就利用反射对字段进行赋值或利用反射调用Setter方法进行赋值。
+4. **初始化**：填充完成后，
