@@ -26,4 +26,4 @@
 		5. 抛出 NoUniqueBeanDefinitionException。
 # 注入原理
 ---
-容器启动
+1. 容器启动时，
