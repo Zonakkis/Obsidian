@@ -27,4 +27,4 @@
 # 注入原理
 ---
 1. **扫描**：容器启动时，扫描classpath，将`@Component`、`@Controller`、`@Service`、`@Repository`等标记的类注册为BeanDefinition。
-2. **实例化**：对于非构造注入
+2. **实例化**：对于构造，调用
