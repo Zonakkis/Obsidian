@@ -1,4 +1,4 @@
 # 定义
 ---
 >[!note] @Autowired
->@Autowired是Spring提供的用于依赖注入注解，用于
+>@Autowired是Spring提供的用于依赖注入注解，用于标记需要
