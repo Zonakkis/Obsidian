@@ -28,7 +28,7 @@ ArrayList既可以用普通下标for循环也可以用增强for循环和迭代�
 LinkedList不能用普通下标for循环（每次都需要从头查找），只能使用增强for循环和迭代器。
 增强for循环中不能`list.remove()`删除元素，否则会抛`ConcurrentModificationException`。
 遍历并删除元素的方法：
-1. 使用迭代器（Iterator）的 `remove()` 方法：
+1. **使用迭代器（Iterator）的 `remove()` 方法**：
 ```java
 Iterator<String> iterator = list.iterator();
 while (iterator.hasNext()) {
@@ -38,8 +38,16 @@ while (iterator.hasNext()) {
 	}
 }
 ```
-2. 使用Java 8的`removeIf`：
+2. **使用Java 8的`removeIf`**：
 ```java
 list.removeIf(item -> needDelete(item));
 ```
-3. 使用普通for循环倒序遍历
+3. **使用普通for循环倒序遍历**：
+```java
+for (int i = list.size() - 1; i >= 0; i--) {
+    String item = list.get(i);
+    if (needDelete(item)) {
+        list.remove(i);
+    }
+}
+```
