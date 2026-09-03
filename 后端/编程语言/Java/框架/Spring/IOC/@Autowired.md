@@ -28,4 +28,4 @@
 ---
 1. **扫描**：容器启动时，扫描classpath，将`@Component`、`@Controller`、`@Service`、`@Repository`等标记的类注册为BeanDefinition。
 2. **实例化**：对于非构造注入Bean，调用无参构造函数创建实例；对于构造器注入Bean，创建时就调用对应构造函数进行注入。
-3. **填充**：实例化后，遍历bean的字段，扫描到`@Autowired`就
+3. **填充**：实例化后，`AutowiredAnnotationBeanPostProcessor`会扫描bean的字段，扫描到`@Autowired`就利用反射
