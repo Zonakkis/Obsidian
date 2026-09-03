@@ -13,7 +13,7 @@
 # 注入机制
 ---
 对于@Autowired，Spring查找Bean的机制如下：
-1. 优先按类型在容器中查找：
+- 优先按类型在容器中查找：
 	1. 没找到：
 		- 默认情况下required = true，抛出 NoSuchBeanDefinitionException。
 		- 如果设置了required = false，则跳过注入，字段保持为 null。
@@ -21,4 +21,5 @@
 	3. 找到多个：逐步执行直到选出Bean。
 		1. 检查是否存在`@Primary`标记的Bean，有则优先注入。
 		2. 检查是否有`@Priority`标记。
-		3. 按名称查找，按变量或参数的名字在容器内寻找
+		3. 按名称查找，按变量或参数的名字在容器内寻找。
+		4. 抛出 NoSuchBeanDefinitionException。
