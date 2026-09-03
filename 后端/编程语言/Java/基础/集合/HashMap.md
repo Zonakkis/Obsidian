@@ -24,7 +24,7 @@ static final class TreeNode<K,V> extends LinkedHashMap.Entry<K,V> {
 transient Node<K,V>[] table;
 ```
 **链表**：解决哈希冲突。当多个key计算出的数组下标相同时，使用链地址法挂在同一个位置。
-**红黑树**：当链表过长（链表长度＞8且数组长度大于64）时，转化为红黑树，将查找复杂度从O(n) 优化到 O(log n)。
+**红黑树**：当链表过长（链表长度≥8且数组长度64）时，转化为红黑树，将查找复杂度从O(n) 优化到 O(log n)。
 # 核心参数
 ---
 
