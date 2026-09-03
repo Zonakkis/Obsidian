@@ -20,6 +20,6 @@ Java8后，ArrayList采用懒加载。初始化后是空的全局数组`DEFAULTC
 ```java
 int newCapacity = oldCapacity + (oldCapacity >> 1);
 ```
-底层通过 Arrays.copyOf(elementData, newCapacity) 实现，本质是分配新数组并进行 System.arraycopy 内存级拷贝。
+底层通过`Arrays.copyOf(elementData, newCapacity)`实现，本质是分配新数组并进行`System.arraycopy`内存级拷贝。
 # 问题
 ---
