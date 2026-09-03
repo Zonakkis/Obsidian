@@ -30,8 +30,8 @@
 		- 如果设置了required = false，则跳过注入，字段保持为 null。
 	2. 找到一个：直接注入。
 	3. 找到多个：逐步执行直到选出Bean。
-		1. 检查是否存在`@Primary`标记的Bean，有则优先注入。
-		2. 检查是否存在`@Qualifier`标记的Bean，并匹配变量或参数名。
+		1. 检查是否存在`@Qualifier`标记的Bean，并匹配变量或参数名。
+		2. 检查是否存在`@Primary`标记的Bean，有则优先注入。
 		3. 检查是否有`@Priority`标记。
 		4. 按名称查找，按变量或参数的名字在容器内寻找。
 		5. 抛出 NoUniqueBeanDefinitionException。
