@@ -13,12 +13,13 @@
 # 两种注入注解
 ---
 
-|        | @Autowired           | @Resource                       |
-| ------ | -------------------- | ------------------------------- |
-| 来源     | Spring框架原生           | Java 标准/JSR-250                 |
-| 默认装配规则 | **byType** (先类型，再名称) | **byName** (先名称，再类型)            |
-| 匹配属性   | required (默认 true)   | name (指定 beanName), type (指定类型) |
-| 耦合度    | 与 Spring 强绑定         |                                 |
+|         | [[@Autowired]]       | @Resource                       |
+| ------- | -------------------- | ------------------------------- |
+| 来源      | Spring框架原生           | Java 标准/JSR-250                 |
+| 默认装配规则  | **byType** (先类型，再名称) | **byName** (先名称，再类型)            |
+| 匹配属性    | required (默认 true)   | name (指定 beanName), type (指定类型) |
+| 支持的注入方式 | 构造器、字段、Setter        | 字段、Setter                       |
+| 耦合度     | 与 Spring 强绑定         | 脱离Spring也能兼容                    |
 
 # 注入机制
 ---
