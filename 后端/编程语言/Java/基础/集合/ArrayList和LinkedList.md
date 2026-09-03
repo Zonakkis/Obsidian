@@ -16,7 +16,10 @@
 ## 初始化
 Java8后，ArrayList采用懒加载。初始化后是空的全局数组`DEFAULTCAPACITY_EMPTY_ELEMENTDATA`，直到第一次`add()`才分配内存。默认初始化容量为10。
 ## 扩容
-
-
+`add()`容量不足时扩容为原来的1.5倍：
+```java
+int newCapacity = oldCapacity + (oldCapacity >> 1);
+```
+底层通过 Arrays.copyOf(elementData, newCapacity) 实现，本质是分配新数组并进行 System.arraycopy 内存级拷贝。
 # 问题
 ---
