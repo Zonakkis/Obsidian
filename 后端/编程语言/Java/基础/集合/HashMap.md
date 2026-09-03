@@ -86,5 +86,5 @@ else {  // 移动
 	多线程环境下应使用`ConcurrentHashMap`
 2. 为什么重写 `equals()`必须要重写`hashCode()`？
 	- 哈希容器的约定：逻辑相同的对象hashcode必须相同
-	- hashCode决定了元素的位置，equals决定两个key是否相同
-	- 如果两个元素equals相同但hashCode不同，会被放到不同的桶，导致get找不到逻辑上相同的元素
+	- 哈希容器等先通过`hashCode()`找到桶，再通过`equals()`在桶内寻找元素。
+	- 如果只重写`equals`而不重写`hashCode`，逻辑上相同的两个对象hashCode不同，会导致HashMapput了却get不到，HashSet存在多个相同元素的情况。
