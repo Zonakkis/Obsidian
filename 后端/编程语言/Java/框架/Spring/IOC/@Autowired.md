@@ -1,7 +1,7 @@
 # 定义
 ---
 >[!note] @Autowired
->@Autowired是Spring提供的用于依赖注入注解，用于标记需要自动注入的对象。
+>@Autowired是Spring提供的用于依赖注入注解，用于标记字段 / 构造方法 / Setter 方法 / 方法参数需要自动注入Bean。
 
 # 三种注入方式
 ---
