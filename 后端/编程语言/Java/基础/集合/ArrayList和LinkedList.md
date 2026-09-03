@@ -24,4 +24,5 @@ int newCapacity = oldCapacity + (oldCapacity >> 1);
 # 问题
 ---
 ## 遍历ArrayList和LinkedList有什么要注意？
-ArrayList既可以用普通下标for循环也可以用增强for循环
+ArrayList既可以用普通下标for循环也可以用增强for循环。
+LinkedList不能用普通下标for循环，
