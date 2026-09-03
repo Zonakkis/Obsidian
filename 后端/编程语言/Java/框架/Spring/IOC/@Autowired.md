@@ -14,4 +14,7 @@
 ---
 对于@Autowired，Spring查找Bean的机制如下：
 1. 优先按类型在容器中查找。
-2. 如果只找到一个，进行装配
+2. 如果没找到：
+	- 默认情况下required = true，抛出 NoSuchBeanDefinitionException。
+	- 如果设置了required = false，则跳过注入，字段保持为 null。
+3. 
