@@ -85,6 +85,6 @@ else {  // 移动
 		- ++size不是原子操作，多线程下计数不准确
 	多线程环境下应使用`ConcurrentHashMap`
 2. 为什么重写equals必须重写hashCode？
-	- 哈希容器的约定：逻辑相同的对象hashcode
+	- 哈希容器的约定：逻辑相同的对象hashcode必须相同
 	- hashCode决定了元素的位置，equals决定两个key是否相同
-	- 如果两个元素equals相同但hashCode不同，会被放到不同的位置，导致get找不到已有元素
+	- 如果两个元素equals相同但hashCode不同，会被放到不同的桶，导致get找不到逻辑上相同的元素
