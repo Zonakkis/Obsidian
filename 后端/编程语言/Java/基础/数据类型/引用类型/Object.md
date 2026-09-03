@@ -14,5 +14,6 @@ System.out.print(a.equals(b)); // true
 - `==`比较的是两个变量指向的对象地址是否相同。
 - `equals()`在常用的类中都重写为了比较两个对象的内容是否相同。
 ## 为什么重写 `equals()`必须要重写`hashCode()`？
-因为哈希集合等先通过`hashCode()`找到桶，再通过`equals()`在桶内寻找元素。
+哈希容器的约定：逻辑相同的对象hashcode必须相同。
+哈希容器等先通过`hashCode()`找到桶，再通过`equals()`在桶内寻找元素。
 如果只重写`equals`而不重写`hashCode`，逻辑上相同的两个对象hashCode不同，会导致hashmapput了却get不到，hashset存在多个相同元素的情况。
