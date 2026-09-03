@@ -23,4 +23,5 @@ int newCapacity = oldCapacity + (oldCapacity >> 1);
 底层通过`Arrays.copyOf(elementData, newCapacity)`实现，本质是分配新数组并进行`System.arraycopy`内存级拷贝。
 # 问题
 ---
-## 遍历ArrayList和LinkedList有什么
+## 遍历ArrayList和LinkedList有什么要注意？
+ArrayList既可以用普通下标for循环也可以用增强for循环
