@@ -26,4 +26,5 @@ int newCapacity = oldCapacity + (oldCapacity >> 1);
 ## 遍历ArrayList和LinkedList有什么要注意？
 ArrayList既可以用普通下标for循环也可以用增强for循环和迭代器。
 LinkedList不能用普通下标for循环（每次都需要从头查找），只能使用增强for循环和迭代器。
-增强for循环中不能
+增强for循环中不能`list.remove()`删除元素，否则会抛`ConcurrentModificationException`。
+遍历并删除list
