@@ -26,4 +26,4 @@
 		5. 抛出 NoUniqueBeanDefinitionException。
 # 注入原理
 ---
-1. 容器启动时，
+1. 容器启动时，扫描classpath，将`@Component`、`@Controller`、`@Service`、`@Reposirity`
