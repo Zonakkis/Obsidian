@@ -16,3 +16,5 @@
 `Segment`继承了`ReentrantLock`，内部包含一个`HashEntry<K,V>[]`数组，每个`HashEntry`是一个链表节点。
 ## put
 ---
+1. 计算hash
+2. 通过hash定位Segment
