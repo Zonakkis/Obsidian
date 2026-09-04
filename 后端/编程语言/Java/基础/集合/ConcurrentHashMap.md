@@ -14,8 +14,10 @@
 ## 数据结构
 核心为一个`Segment<K,V>[]`数组（默认长度为16）。
 `Segment`继承了`ReentrantLock`，内部包含一个`HashEntry<K,V>[]`数组，每个`HashEntry`是一个链表节点。
+## get
+
+
 ## put
----
 1. 计算hash
 2. 通过hash定位Segment
 3. 通过`tryLock()`尝试获取分段的锁，如果失败则通过`scanAndLockForPut()`自旋锁，自旋一定次数后转为阻塞锁。
