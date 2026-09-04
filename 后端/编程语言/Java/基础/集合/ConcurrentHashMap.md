@@ -12,5 +12,5 @@
 # JDK7：分段锁
 ---
 ## 数据结构
-核心为一个`Segment<K,V>[]`数组。
-`Segment`继承了`ReentrantLock`，
+核心为一个`Segment<K,V>[]`数组（默认长度为16）。
+`Segment`继承了`ReentrantLock`，内部包含一个`HashEntry<K,V>[]`数组
