@@ -18,3 +18,4 @@
 ---
 1. 计算hash
 2. 通过hash定位Segment
+3. 
