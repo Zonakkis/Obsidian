@@ -12,4 +12,4 @@
 # JDK7
 ---
 ## 数据结构
-Segment
+`Segment`继承了`ReentrantLock`。
