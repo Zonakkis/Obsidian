@@ -5,7 +5,7 @@
         "id": "v-mtk0n07c-swi5wb",
         "name": "维云",
         "provider": "openai-compatible",
-        "baseUrl": "https://vsllm.com/v1",
+        "baseUrl": "https://vsllm.cc/v1",
         "apiKey": "sk-XcwXSHMJnOB0Wm2qTUYcq7dxLeQ7qxroYBrVggHVBPfrAg8R",
         "models": [
           {
