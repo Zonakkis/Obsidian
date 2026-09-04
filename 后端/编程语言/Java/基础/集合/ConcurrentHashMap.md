@@ -15,7 +15,7 @@
 核心为一个`Segment<K,V>[]`数组（默认长度为16）。
 `Segment`继承了`ReentrantLock`，内部包含一个`HashEntry<K,V>[]`数组，每个`HashEntry`是一个链表节点。
 ## get
-不加锁。HashEntry的value和next都声明为volatile
+不加锁。HashEntry的value和next都声明为volatile，保证了内存可见性。
 
 ## put
 1. 计算hash
