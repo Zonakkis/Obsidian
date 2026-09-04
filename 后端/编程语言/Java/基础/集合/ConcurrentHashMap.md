@@ -18,5 +18,5 @@
 ---
 1. 计算hash
 2. 通过hash定位Segment
-3. 通过`tryLock()`尝试获取锁，如果失败则通过`scanAndLockForPut()`自旋锁，自旋一定次数后转为阻塞锁。
-4. 
+3. 通过`tryLock()`尝试获取分段的锁，如果失败则通过`scanAndLockForPut()`自旋锁，自旋一定次数后转为阻塞锁。
+4. 通过hash定位HashEntry
