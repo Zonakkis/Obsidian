@@ -13,3 +13,4 @@
 ---
 ## 数据结构
 核心为一个`Segment<K,V>[]`数组。
+`Segment`继承了`ReentrantLock`，
