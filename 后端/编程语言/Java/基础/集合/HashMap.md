@@ -33,7 +33,7 @@ transient Node<K,V>[] table;
 | `DEFAULT_INITIAL_CAPACITY` | 初始容量  | 16    | 2的幂次方，平衡内存与冲突率                            |
 | `LOAD_FACTOR`              | 负载因子  | 0.75f | 空间与时间的折中。0.75时泊松分布下链表长度>=8的概率极低           |
 | `TREEIFY_THRESHOLD`        | 树化桶阈值 | 8     | 基于泊松分布，随机哈希下链表长度达到8的概率约为千万分之六，几乎不会触发，只是兜底 |
-| `MIN_TREEIFY_CAPACITY`     | 树化总阈值 | 64    | HashMap 数组的总长度                            |
+| `MIN_TREEIFY_CAPACITY`     | 树化总阈值 | 64    | HashMap 数组的总长度小于64时不进行树化                  |
 | `UNTREEIFY_THRESHOLD`      | 退化阈值  | 6     | 桶中的节点总数少于等于6                              |
 # 核心机制
 ---
