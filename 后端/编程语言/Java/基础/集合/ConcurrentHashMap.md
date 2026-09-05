@@ -28,7 +28,9 @@
 # JDK8：CAS + synchronized
 ---
 ## 数据结构
-数组+链表+红黑树
+核心为**数组**+**链表**+**红黑树**。
 ```java
 volatile Node<K,V>[] table;
 ```
+## 核心参数
+---
