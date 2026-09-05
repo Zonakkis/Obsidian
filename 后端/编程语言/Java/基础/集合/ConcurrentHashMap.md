@@ -45,3 +45,5 @@ volatile Node<K,V>[] table;
 	- **未初始时**：初始容量
 	- **初始化后**：扩容阈值（$0.75 \times n$）
 ## put
+1. **校验参数**：Key和Value都不允许为null。
+2. **计算Hash**：
