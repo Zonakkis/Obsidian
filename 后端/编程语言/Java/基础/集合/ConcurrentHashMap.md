@@ -45,6 +45,6 @@ volatile Node<K,V>[] table;
 	- **未初始时**：初始容量
 	- **初始化后**：扩容阈值（$0.75 \times n$）
 ## put
-1. **校验参数**：Key和Value都不允许为null。（
+1. **校验参数**：Key和Value都不允许为null。（get到null不知道key是否存在，用containsKey不能保证原子性）
 2. **计算Hash**：`(h ^ (h >>> 16)) & HASH_BITS`，其中`HASH_BITS = 0x7fffffff`，只有最高位符号位为0，保证与运算结果为正数。
 3. 
