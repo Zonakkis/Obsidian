@@ -62,6 +62,7 @@ volatile Node<K,V>[] table;
 4. **检查树化**：如果链表节点数达到阈值（默认 8），且数组容量≥64，转为红黑树。
 5. **更新计数和扩容检查**：调用`addCount()`更新计数并检查是否需要扩容。
 ## addCount
+采用了`LongAdder`的分段累加思想：
 
 # size
 `size = baseCount + sum(CounterCell[])`
