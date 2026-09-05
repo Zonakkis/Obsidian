@@ -41,3 +41,4 @@ volatile Node<K,V>[] table;
 - **>0**：
 	- **未初始时**：初始容量
 	- **初始化后**：扩容阈值（$0.75 \times n$）
+`ForwardingNode`
