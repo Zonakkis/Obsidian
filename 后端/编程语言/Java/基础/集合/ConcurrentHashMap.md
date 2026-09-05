@@ -50,4 +50,4 @@ volatile Node<K,V>[] table;
 3. **自旋循环 for (Node<K,V>[] tab = table;;)**：
 	1. **若数组未初始化**：调用`initTable`，利用CAS将`sizeCtl`设为-1，成功的进行初始化，失败的自旋等待。
 	2. **定位桶**：`(n - 1) & hash`。
-	3. 
+	3. **桶为空**：
