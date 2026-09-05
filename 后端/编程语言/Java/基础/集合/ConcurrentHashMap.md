@@ -64,6 +64,6 @@ volatile Node<K,V>[] table;
 ## addCount
 采用了`LongAdder`的分段累加思想：
 CAS成功的更新全局基础变量`baseCount`。
-CAS失败，存在并发竞争，在CounterCe
+CAS失败，存在并发竞争，在`CounterCell[]`中随机选择一个进行CAS累加。
 # size
 `size = baseCount + sum(CounterCell[])`
