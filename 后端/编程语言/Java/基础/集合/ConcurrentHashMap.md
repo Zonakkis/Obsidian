@@ -32,7 +32,8 @@
 ```java
 volatile Node<K,V>[] table;
 ```
-`ForwardingNode`是一种特殊的Node，
+`ForwardingNode`是一种特殊的Node，作用：
+1. **标记桶已经迁移**：某个桶迁移后会将原数组的桶
 ## 核心参数
 ---
 `volatile int sizeCtl`是控制初始化和扩容的核心变量：
