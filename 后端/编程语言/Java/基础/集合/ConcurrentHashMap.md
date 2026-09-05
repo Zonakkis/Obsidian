@@ -63,6 +63,7 @@ volatile Node<K,V>[] table;
 5. **更新计数和扩容检查**：调用`addCount()`更新计数并检查是否需要扩容。
 ## addCount
 采用了`LongAdder`的分段累加思想：
-
+CAS成功的更新全局基础变量`baseCount`。
+CAS失败，存在并发竞争，在CounterCe
 # size
 `size = baseCount + sum(CounterCell[])`
