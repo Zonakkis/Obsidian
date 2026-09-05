@@ -32,7 +32,7 @@
 ```java
 volatile Node<K,V>[] table;
 ```
-`ForwardingNode`
+`ForwardingNode`是一种特殊的
 ## 核心参数
 ---
 `volatile int sizeCtl`是控制初始化和扩容的核心变量：
