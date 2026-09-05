@@ -46,4 +46,4 @@ volatile Node<K,V>[] table;
 	- **初始化后**：扩容阈值（$0.75 \times n$）
 ## put
 1. **校验参数**：Key和Value都不允许为null。
-2. **计算Hash**：
+2. **计算Hash**：`(h ^ (h >>> 16)) & HASH_BITS`，其中`HASH_BITS = 0x7fffffff`（
