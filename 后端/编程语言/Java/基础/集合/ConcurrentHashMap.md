@@ -99,7 +99,9 @@ static final class TreeBin<K,V> extends Node<K,V> {
 3. **认领区间**：`transferIndex = n`（原数组长度），线程通过CAS让`transferIndex -= stride`，认领自己的迁移区间，失败的自旋重试。
 4. **迁移**：按区间内下标从大到小进行迁移，对于每一个桶：
 	1. **桶为空** `(tab[i] == null)`：通过CAS将桶设为`ForwardingNode`，失败则自旋重试。
-	2. **桶已经迁移**`(fh == MOVED)`：如果该桶已经是`ForwardingNode`，说明别的线程处理过了，跳过，处理下一个。
+	2. **桶已经迁移**`(fh == MOVED)`：如果该桶已经是`ForwardingNode`，直接跳过。
+	3. **普通链表**：
+		1. **锁住首节点**：通过`synchronized(f)`锁住桶的首节点。
 ## addCount
 采用了`LongAdder`的分段累加思想：
 CAS成功的更新全局基础变量`baseCount`。
