@@ -37,8 +37,8 @@ volatile Node<K,V>[] table;
 2. **协助其他线程参与扩容**：当put遇到`ForwardingNode`时会调用`helpTransfer`协助扩容。
 `TreeBin`：在`ConcurrentHashMap`中，桶的首节点不是`TreeNode`，而是`TreeBin`。`TreeBin`既维护着红黑树，也维护着原有的链表。`TreeBin`的Hash固定为-2。
 原因：
-- 锁是对桶的首节点进行的，如果写过程桶的首节点变了，可能会有多个线程同时写。
-- 如果无锁地读取正在进行调整的红黑树，可能会读取出错。
+1. 锁是对桶的首节点进行的，如果写过程桶的首节点变了，可能会有多个线程同时写。
+2. 如果无锁地读取正在进行调整的红黑树，可能会读取出错。
 ```java
 static final class TreeBin<K,V> extends Node<K,V> {
     TreeNode<K,V> root;           // 指向红黑树的根节点
@@ -58,7 +58,7 @@ static final class TreeBin<K,V> extends Node<K,V> {
 	1. 有读锁：利用CAS将`lockState`设为`WAITER`，然后调用`LockSupport.park()`挂起线程，等待读线程唤醒。
 	2. 没有读锁：利用CAS将`lockState`设为`WRITER`，然后进行插入/删除等操作。
 **读操作**：
-3. 
+1. 
 ## 核心参数
 ---
 `volatile int sizeCtl`是控制初始化和扩容的核心变量：

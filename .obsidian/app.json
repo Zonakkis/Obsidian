@@ -29,5 +29,6 @@
     "editor:indent-list",
     "editor:unindent-list",
     "editor:configure-toolbar"
-  ]
+  ],
+  "smartIndentList": false
 }
