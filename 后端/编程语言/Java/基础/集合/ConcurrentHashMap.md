@@ -55,7 +55,7 @@ static final class TreeBin<K,V> extends Node<K,V> {
 **写操作**：
 1. 外层已经用`synchronized(TreeBin)`锁住了桶，因此同一时间只有一个写进程。
 2. 检查`lockState`是否有读锁（`READER`）。
-	1. 如果有
+	1. 如果有读锁：利用CAS将`lockState`
 ## 核心参数
 ---
 `volatile int sizeCtl`是控制初始化和扩容的核心变量：
