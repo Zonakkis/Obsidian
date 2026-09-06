@@ -55,12 +55,13 @@ static final class TreeBin<K,V> extends Node<K,V> {
 **写操作**：
 1. 外层已经用`synchronized(TreeBin)`锁住了桶，因此同一时间只有一个写进程。
 2. 检查`lockState`是否有读锁（`READER`）：
-	1. 有读锁：利用CAS将`lockState`设为`WAITER`，然后调用`LockSupport.park()`挂起线程，等待读线程唤醒。
-	2. 没有读锁：利用CAS将`lockState`设为`WRITER`，然后进行插入/删除等操作。
+	1. 有读锁：通过CAS将`lockState`设为`WAITER`，然后调用`LockSupport.park()`挂起线程，等待读线程唤醒。
+	2. 没有读锁：通过CAS将`lockState`设为`WRITER`，然后进行插入/删除等操作。
 **读操作**：
 1. 检查`lockState`是否有写锁或等待锁（`WRITER`和`WAITER`）：
 	1. 有写锁或等待锁：退化为查询链表`first`。
-	2. 没有写锁也没有等待锁：利用CAS
+	2. 没有写锁也没有等待锁：
+		1. 通过CAS将`lockState += READER`。
 ## 核心参数
 ---
 `volatile int sizeCtl`是控制初始化和扩容的核心变量：
@@ -76,9 +77,9 @@ static final class TreeBin<K,V> extends Node<K,V> {
 1. **校验参数**：Key和Value都不允许为null。（get到null不知道key是否存在，用containsKey不能保证原子性）
 2. **计算Hash**：`(h ^ (h >>> 16)) & HASH_BITS`，其中`HASH_BITS = 0x7fffffff`，只有最高位符号位为0，保证与运算结果为正数。
 3. **自旋循环 for (Node<K,V>[] tab = table;;)**：
-	1. **若数组未初始化**：调用`initTable()`，利用CAS将`sizeCtl`设为-1，成功的进行初始化，失败的自旋等待。
+	1. **若数组未初始化**：调用`initTable()`，通过CAS将`sizeCtl`设为-1，成功的进行初始化，失败的自旋等待。
 	2. **定位桶**：`(n - 1) & hash`。
-	3. **桶为空**：利用CAS将新节点插入到桶头部，成功的直接break，失败的自旋重试。
+	3. **桶为空**：通过CAS将新节点插入到桶头部，成功的直接break，失败的自旋重试。
 	4. **桶非空**：
 		1. 使用synchronized锁住桶的首节点
 		2. 双重检查防止修改同一个节点
