@@ -38,17 +38,18 @@ volatile Node<K,V>[] table;
 `TreeBin`：在`ConcurrentHashMap`中，桶的首节点不是`TreeNode`，而是`TreeBin`。`TreeBin`既维护着红黑树，也维护着原有的链表。
 ```java
 static final class TreeBin<K,V> extends Node<K,V> {
-    TreeNode<K,V> root;           // 指向红黑树的真正根节点
-    volatile TreeNode<K,V> first; // 指向双向链表的头节点（红黑树同时维护着链表关系）
+    TreeNode<K,V> root;           // 指向红黑树的根节点
+    volatile TreeNode<K,V> first; // 指向双向链表的头节点
     volatile Thread waiter;       // 等待写锁的线程
-    volatile int lockState;       // 核心控制状态！用位运算模拟的读写锁
-     
-    // lockState 的状态定义 
+    volatile int lockState;       // 核心控制状态，用位运算模拟的读写锁
+    
+    // lockState 的状态定义
     static final int WRITER = 1;  // 二进制 001，表示写锁被占用
     static final int WAITER = 2;  // 二进制 010，表示有线程在等待写锁
     static final int READER = 4;  // 二进制 100，读锁状态，每增加一个读线程，lockState += 4
 }
 ```
+
 ## 核心参数
 ---
 `volatile int sizeCtl`是控制初始化和扩容的核心变量：
