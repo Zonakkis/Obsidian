@@ -49,7 +49,8 @@ static final class TreeBin<K,V> extends Node<K,V> {
     static final int READER = 4;  // 二进制 100，读锁状态，每增加一个读线程，lockState += 4
 }
 ```
-
+**写操作**：
+1. 外层已经用`synchronized(TreeBin)`锁住了桶，因此同一时间只有一个
 ## 核心参数
 ---
 `volatile int sizeCtl`是控制初始化和扩容的核心变量：
