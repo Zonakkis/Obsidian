@@ -113,7 +113,7 @@ static final class TreeBin<K,V> extends Node<K,V> {
 	2. **收尾**：最后一个退出的线程负责：
 		1. 将`table`指向新的`nextTable。`
 		2. 将`nextTable`置为`null`。
-		3. 计算新的`sizeCtl = 0.75 * 2n`。
+		3. 计算新的`sizeCtl = (n << 1) - (n >>> 1)`（即0.75 * 2n）。
 ## addCount
 采用了`LongAdder`的分段累加思想：
 CAS成功的更新全局基础变量`baseCount`。
