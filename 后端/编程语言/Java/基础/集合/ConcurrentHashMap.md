@@ -96,7 +96,7 @@ static final class TreeBin<K,V> extends Node<K,V> {
 采用了分治思想，将扩容任务按区间划分，每个线程认领一部分桶（默认最少为16个），然后从尾部向头部逐个桶开始开始迁移。
 1. **计算步长**：`stride = (NCPU > 1) ? (n >>> 3) / NCPU : n`
 2. **创建新数组**：`Node<K,V>[] nt = (Node<K,V>[])new Node<?,?>[n << 1]`
-3. 
+3. **认领区间**：`transferIndex`
 ## addCount
 采用了`LongAdder`的分段累加思想：
 CAS成功的更新全局基础变量`baseCount`。
