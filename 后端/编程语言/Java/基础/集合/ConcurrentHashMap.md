@@ -59,7 +59,7 @@ static final class TreeBin<K,V> extends Node<K,V> {
 	2. 没有读锁：利用CAS将`lockState`设为`WRITER`，然后进行插入/删除等操作。
 **读操作**：
 1. 检查`lockState`是否有写锁（`WRITER`）：
-	1. 
+	1. 有写锁：
 ## 核心参数
 ---
 `volatile int sizeCtl`是控制初始化和扩容的核心变量：
