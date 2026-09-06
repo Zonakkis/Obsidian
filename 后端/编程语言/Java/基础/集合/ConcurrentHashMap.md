@@ -110,8 +110,10 @@ static final class TreeBin<K,V> extends Node<K,V> {
 		3. **标记**：将`lo`挂到`nt[i]`，`hi`挂到`nt[i + n]`，将旧桶设为`ForwardingNode`。
 5. **退出**：每个区间迁移完成后继续认领区间，直到`transferIndex <= 0`：
 	1. **线程退出**：线程退出时通过CAS将`sizeCtl -= 1`。
-	2. **收尾**：
-		1. 最后一个退出的线程负责将`table`指向新的`nextTable`，然后将`nextTable`置为`null`，同时计算新的$sizeCtl = 0.75 \times 2n$。
+	2. **收尾**：最后一个退出的线程负责：
+		1. 将`table`指向新的`nextTable。`
+		2. 将`nextTable`置为`null`。
+		3. 计算新的`sizeCtl = 0.75 * 2n`。
 ## addCount
 采用了`LongAdder`的分段累加思想：
 CAS成功的更新全局基础变量`baseCount`。
