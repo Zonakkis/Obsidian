@@ -30,5 +30,5 @@
     "editor:unindent-list",
     "editor:configure-toolbar"
   ],
-  "smartIndentList": false
+  "smartIndentList": true
 }
