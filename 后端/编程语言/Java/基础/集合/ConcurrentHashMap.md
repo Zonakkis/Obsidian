@@ -108,6 +108,7 @@ static final class TreeBin<K,V> extends Node<K,V> {
 		1. **拆分链表**：拆分将`TreeBin`的链表同样拆分为`lo`和`hi`
 		2. **检查**：再各自检查是否需要退化为链表。
 		3. **标记**：将`lo`挂到`nt[i]`，`hi`挂到`nt[i + n]`，将旧桶设为`ForwardingNode`。
+5. 
 ## addCount
 采用了`LongAdder`的分段累加思想：
 CAS成功的更新全局基础变量`baseCount`。
