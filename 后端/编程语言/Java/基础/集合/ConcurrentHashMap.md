@@ -62,6 +62,9 @@ static final class TreeBin<K,V> extends Node<K,V> {
 	1. 有写锁或等待锁：退化为查询链表`first`。
 	2. 没有写锁也没有等待锁：
 		1. 通过CAS将`lockState += READER`。
+		2. 遍历红黑树进行查找。
+		3. 查找完成后通过CAS`lockState -= READER`。
+		4. 若
 ## 核心参数
 ---
 `volatile int sizeCtl`是控制初始化和扩容的核心变量：
