@@ -102,8 +102,8 @@ static final class TreeBin<K,V> extends Node<K,V> {
 	2. **桶已经迁移**`(fh == MOVED)`：如果该桶已经是`ForwardingNode`，直接跳过。
 	3. **普通链表**：
 		1. **锁住首节点**：通过`synchronized(f)`锁住桶的首节点。
-		2. **遍历链表**：对每个节点计算`h & n`（`e.hash & oldCap`），0则放在低位链表`i`，1则放在高位链表`i + oldCap`。
-		3. 
+		2. **遍历链表**：对每个节点计算`h & n`（`hash & oldCap`），0则放在低位链表`lo`，1则放在高位链表`hi`。
+		3. **标记**：将`lo`挂到`nt[i]`，`hi`
 ## addCount
 采用了`LongAdder`的分段累加思想：
 CAS成功的更新全局基础变量`baseCount`。
