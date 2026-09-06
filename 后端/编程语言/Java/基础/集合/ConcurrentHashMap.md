@@ -97,7 +97,8 @@ static final class TreeBin<K,V> extends Node<K,V> {
 1. **计算步长**：`stride = (NCPU > 1) ? (n >>> 3) / NCPU : n`
 2. **创建新数组**：`Node<K,V>[] nt = (Node<K,V>[])new Node<?,?>[n << 1]`
 3. **认领区间**：`transferIndex = n`（原数组长度），线程通过CAS让`transferIndex -= stride`，认领自己的迁移区间，失败的自旋重试。
-4. 
+4. **迁移**：按区间内下标从大到小进行迁移，对于每一个桶：
+	1. 桶为空 **(tab[i] == null)**：
 ## addCount
 采用了`LongAdder`的分段累加思想：
 CAS成功的更新全局基础变量`baseCount`。
