@@ -35,7 +35,20 @@ volatile Node<K,V>[] table;
 `ForwardingNode`是一种特殊的Node，作用：
 1. **标记桶已经迁移**：某个桶迁移后会将原数组的桶设为`ForwardingNode`，此时查找操作会到新数组中查找。
 2. **协助其他线程参与扩容**：当put遇到`ForwardingNode`时会调用`helpTransfer`协助扩容。
-`TreeBin`：在`ConcurrentHashMap`中，桶的首节点不是`TreeNode`，而是`TreeBin`。
+`TreeBin`：在`ConcurrentHashMap`中，桶的首节点不是`TreeNode`，而是`TreeBin`。`TreeBin`既维护着红黑树，也维护着原有的链表。
+```java
+static final class TreeBin<K,V> extends Node<K,V> {
+    TreeNode<K,V> root;           // 指向红黑树的真正根节点
+    volatile TreeNode<K,V> first; // 指向双向链表的头节点（红黑树同时维护着链表关系）
+    volatile Thread waiter;       // 等待写锁的线程
+    volatile int lockState;       // 核心控制状态！用位运算模拟的读写锁
+     
+    // lockState 的状态定义 
+    static final int WRITER = 1;  // 二进制 001，表示写锁被占用
+    static final int WAITER = 2;  // 二进制 010，表示有线程在等待写锁
+    static final int READER = 4;  // 二进制 100，读锁状态，每增加一个读线程，lockState += 4
+}
+```
 ## 核心参数
 ---
 `volatile int sizeCtl`是控制初始化和扩容的核心变量：
