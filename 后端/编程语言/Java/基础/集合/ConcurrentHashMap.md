@@ -35,7 +35,7 @@ volatile Node<K,V>[] table;
 `ForwardingNode`是一种特殊的Node，作用：
 1. **标记桶已经迁移**：某个桶迁移后会将原数组的桶设为`ForwardingNode`，此时查找操作会到新数组中查找。
 2. **协助其他线程参与扩容**：当put遇到`ForwardingNode`时会调用`helpTransfer`协助扩容。
-`TreeBin`：在`ConcurrentHashMap`中，桶的首节点不是`TreeNode`，而是`TreeBin`。`TreeBin`既维护着红黑树，也维护着原有的链表。`TreeBin`的Hash
+`TreeBin`：在`ConcurrentHashMap`中，桶的首节点不是`TreeNode`，而是`TreeBin`。`TreeBin`既维护着红黑树，也维护着原有的链表。`TreeBin`的Hash固定为-2。
 原因：如果无锁地读取正在进行调整的红黑树，可能会读取出错。
 ```java
 static final class TreeBin<K,V> extends Node<K,V> {
