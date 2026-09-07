@@ -13,5 +13,7 @@ pom.xml中：
 ---
 application.yml中：
 ```yaml
-
+feign:
+  okhttp: 
+    enabled: true
 ```
