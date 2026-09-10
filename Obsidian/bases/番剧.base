@@ -29,7 +29,7 @@ views:
     image: note.封面
     imageFit: contain
     imageAspectRatio: 1
-    cardSize: 250
+    cardSize: 220
   - type: table
     name: 表格
     order:
