@@ -6,14 +6,12 @@ formulas:
     tags
     .map(value.replace('#',''))
     .join('，')
-  观看时间: |
-    开始日期.format("yyyy年MM月DD日")
+  观看时间: |-
+    if(开始日期, 开始日期.format("yyyy年MM月DD日"), "未知")
     +
     " - "
     +
-    if(结束日期, 
-    结束日期.format("yyyy年MM月DD日"),
-    today().format("yyyy年MM月DD日"))
+    if(结束日期, 结束日期.format("yyyy年MM月DD日"), today().format("yyyy年MM月DD日"))
   放送日期: 放送日期.format("yyyy年MM月DD日")
 views:
   - type: cards
