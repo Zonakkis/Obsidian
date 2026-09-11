@@ -28,11 +28,7 @@ spring:
     gateway:  
       routes:  
         - id: user  # 路由唯一标识
-          uri: lb://user-service  # 目标地址，lb:// 代表负载均衡
+          uri: lb://user-service  # 目标地址，lb:// 代表负载均衡（从注册中心获取服务）
           predicates:  
-            - Path=/user/**  
-        - id: item  
-          uri: lb://item-service  
-          predicates:  
-            - Path:/item/**, /search/**
+            - Path=/user/**  # 断言规则：匹配路径以/user开头的请求
 ```
