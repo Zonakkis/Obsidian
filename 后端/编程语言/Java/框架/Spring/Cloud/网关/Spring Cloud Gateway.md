@@ -17,3 +17,6 @@
   <artifactId>spring-cloud-starter-loadbalancer</artifactId>
 </dependency>
 ```
+# 配置
+---
+在`application.yml
