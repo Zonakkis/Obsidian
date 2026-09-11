@@ -21,5 +21,18 @@
 ---
 在`application.yml`中：
 ```yaml
-
+spring:  
+  cloud:  
+    nacos:  
+      server-addr: ${hm.nacos.server-addr}:8848  
+    gateway:  
+      routes:  
+        - id: user  # 路由唯一标识
+          uri: lb://user-service  # 目标地址，lb:// 代表负载均衡
+          predicates:  
+            - Path=/user/**  
+        - id: item  
+          uri: lb://item-service  
+          predicates:  
+            - Path:/item/**, /search/**
 ```
