@@ -24,7 +24,7 @@
 spring:  
   cloud:  
     nacos:  
-      server-addr: ${hm.nacos.server-addr}:8848  
+      server-addr: localhost:8848  
     gateway:  
       routes:  
         - id: user  # 路由唯一标识
