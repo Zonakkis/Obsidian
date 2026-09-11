@@ -19,4 +19,7 @@
 ```
 # 配置
 ---
-在`application.yml
+在`application.yml`中：
+```yaml
+
+```
