@@ -6,9 +6,14 @@
 	<groupId>org.springframework.cloud</groupId>
 	<artifactId>spring-cloud-starter-gateway</artifactId>
 </dependency>
-<!-- nacos 服务发现 -->
+<!-- nacos 服务发现（可选） -->
 <dependency>
 	<groupId>com.alibaba.cloud</groupId>
 	<artifactId>spring-cloud-starter-alibaba-nacos-discovery</artifactId>
+</dependency>
+<!--负载均衡器（可选）-->
+<dependency>
+  <groupId>org.springframework.cloud</groupId>
+  <artifactId>spring-cloud-starter-loadbalancer</artifactId>
 </dependency>
 ```
