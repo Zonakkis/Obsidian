@@ -14,7 +14,7 @@ formulas:
     if(结束日期, 
     结束日期.format("yyyy年MM月DD日"),
     today().format("yyyy年MM月DD日"))
-  出版时间: 出版时间.format("yyyy年MM月DD日")
+  出版时间: date(出版时间).format("YYYY年MM月DD日")
 views:
   - type: cards
     name: 卡片
