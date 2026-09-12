@@ -1,6 +1,7 @@
 filters:
   and:
     - file.inFolder("娱乐/漫画")
+    - file.hasProperty("状态")
 formulas:
   标签: |-
     tags
