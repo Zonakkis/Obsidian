@@ -12,7 +12,7 @@ formulas:
     " - "
     +
     if(结束日期, date(结束日期).format("YYYY年MM月DD日"), today().format("YYYY年MM月DD日"))
-  放送日期: 放送日期.format("yyyy年MM月DD日")
+  放送日期: date(放送日期).format("yyyy年MM月DD日")
 views:
   - type: cards
     name: 卡片

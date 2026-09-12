@@ -6,14 +6,13 @@ formulas:
     tags
     .map(value.replace('#',''))
     .join('，')
-  观看时间: |
-    date(开始日期).format("YYYY年MM月DD日")
+  观看时间: |-
+    if(开始日期, date(开始日期).format("YYYY年MM月DD日"), "未知")
     +
     " - "
     +
-    if(结束日期, 
-    date(结束日期).format("YYYY年MM月DD日"),
-    today().format("YYYY年MM月DD日"))
+    if(结束日期, date(结束日期).format("YYYY年MM月DD日"), today().format("YYYY年MM月DD日"))
+  连载日期: date(连载日期).format("yyyy年MM月DD日")
 views:
   - type: cards
     name: 卡片
@@ -25,6 +24,7 @@ views:
       - 状态
       - formula.标签
       - formula.观看时间
+      - formula.连载日期
     sort:
       - property: 结束日期
         direction: ASC
