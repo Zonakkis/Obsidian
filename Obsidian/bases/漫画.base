@@ -7,12 +7,12 @@ formulas:
     .map(value.replace('#',''))
     .join('，')
   观看时间: |-
-    if(开始日期, date(开始日期).format("YYYY年MM月DD日"), "未知")
+    if(note["开始日期"], date(note["开始日期"]).format("YYYY年MM月DD日"), "未知")
     +
     " - "
     +
-    if(结束日期, date(结束日期).format("YYYY年MM月DD日"), today().format("YYYY年MM月DD日"))
-  连载日期: date(连载日期).format("YYYY年MM月DD日")
+    if(note["结束日期"], date(note["结束日期"]).format("YYYY年MM月DD日"), today().format("YYYY年MM月DD日"))
+  连载日期: date(note["连载日期"]).format("YYYY年MM月DD日")
 views:
   - type: cards
     name: 卡片
