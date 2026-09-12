@@ -7,7 +7,7 @@ formulas:
     .map(value.replace('#',''))
     .join('，')
   观看时间: |
-    开始日期.format("yyyy年MM月DD日")
+    date(开始日期).format("yyyy年MM月DD日")
     +
     " - "
     +
@@ -44,11 +44,10 @@ views:
       - formula.出版时间
       - 状态
       - formula.标签
+      - formula.观看时间
     sort:
       - property: formula.未命名
         direction: ASC
       - property: 放送日期
         direction: ASC
-    columnSize:
-      file.name: 168
-      note.制作组: 101
+    columnSize: {}
