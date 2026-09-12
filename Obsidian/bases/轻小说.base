@@ -44,8 +44,6 @@ views:
       - formula.标签
       - formula.观看时间
     sort:
-      - property: formula.未命名
-        direction: ASC
       - property: 放送日期
         direction: ASC
     columnSize: {}

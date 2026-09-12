@@ -39,8 +39,6 @@ views:
       - 状态
       - formula.标签
     sort:
-      - property: formula.未命名
-        direction: ASC
       - property: 放送日期
         direction: ASC
     columnSize:
