@@ -17,18 +17,3 @@
   <artifactId>spring-cloud-starter-loadbalancer</artifactId>
 </dependency>
 ```
-# 配置
----
-在`application.yml`中：
-```yaml
-spring:  
-  cloud:  
-    nacos:  
-      server-addr: localhost:8848  
-    gateway:  
-      routes:  
-        - id: user  # 路由唯一标识
-          uri: lb://user-service  # 目标地址，lb:// 代表负载均衡（从注册中心获取服务）
-          predicates:  
-            - Path=/user/**, /login/**  # 断言规则：匹配路径以/user和/login开头的请求
-```
