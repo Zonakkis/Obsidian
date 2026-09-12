@@ -12,19 +12,18 @@ formulas:
     " - "
     +
     if(结束日期, date(结束日期).format("YYYY年MM月DD日"), today().format("YYYY年MM月DD日"))
-  连载日期: date(连载日期).format("yyyy年MM月DD日")
+  连载日期: date(连载日期).format("YYYY年MM月DD日")
 views:
   - type: cards
     name: 卡片
     order:
       - file.name
       - 作者
-      - 连载日期
+      - formula.连载日期
       - 发行杂志
       - 状态
       - formula.标签
       - formula.观看时间
-      - formula.连载日期
     sort:
       - property: 结束日期
         direction: ASC
